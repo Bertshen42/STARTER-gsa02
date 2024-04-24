@@ -41,6 +41,7 @@ string starT(int width, int height)
         }
    result += "\n";
   return result;
+    }
 }
 
 // Test-Driven Development; check expected results against actual
@@ -120,5 +121,5 @@ int main(int argc, char *argv[])
 
   cout << starL(width, height);
   return 0;
-  
+}
 }
