@@ -20,7 +20,7 @@ string starC(int width, int height)
   
   for(int col=1; col<=width; col++)
     {
-      result+="*"
+      result+="*";
     }
   result += "\n";
   for(int row=2; row<=height-1; row++)
@@ -35,7 +35,7 @@ string starC(int width, int height)
     }
   for(int col=1; col<=width; col++)
     {
-      result+="*"
+      result+="*";
     }
   result += "\n";
   return result;
