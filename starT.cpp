@@ -30,7 +30,7 @@ string starT(int width, int height)
     result += "\n";
  
 
-  for (int row = 2; row <= length; row++)
+  for (int row = 2; row <= height; row++)
     {
       for (int col = 1; col <= width; col++)
         {
@@ -40,8 +40,8 @@ string starT(int width, int height)
            result += " ";
         }
    result += "\n";
-  return result;
     }
+ return result;
 }
 
 // Test-Driven Development; check expected results against actual
@@ -119,7 +119,7 @@ int main(int argc, char *argv[])
     exit(0);
   }
 
-  cout << starL(width, height);
+  cout << starT(width, height);
   return 0;
 }
 }
