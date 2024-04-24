@@ -13,8 +13,31 @@ void runTests(void);
 
 string starT(int width, int height)
 {
-  string result = "";
-  result = "stu"; // TODO: remove this line, replace with correct code
+ string result = "";
+  // check if parameters are valid
+  if ((width < 3) || (height < 2))
+    return result; // return without printing anything
+
+  int num = width/2+1;
+  for (int row = 1; row <= 1; row++)
+  {
+    for (int col = 1; col <= width; col++)
+    {
+      result += "*";
+    }
+    result += "\n";
+  }
+
+  for (int row = 2; row <= length; row++)
+    {
+      for (int col = 1; col <= width; col++)
+        {
+          if (col==num)
+           result += "*";
+          else
+           result += "";
+        }
+   result += "\n";
   return result;
 }
 
