@@ -14,7 +14,7 @@ void runTests(void);
 string starT(int width, int height)
 {
   string result = "";
-  result = "stub"; // TODO: remove this line, replace with correct code
+  result = "stu"; // TODO: remove this line, replace with correct code
   return result;
 }
 
