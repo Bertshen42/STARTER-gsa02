@@ -122,5 +122,4 @@ int main(int argc, char *argv[])
   cout << starT(width, height);
   return 0;
 }
-}
-}
+
