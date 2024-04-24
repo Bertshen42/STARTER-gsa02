@@ -11,7 +11,24 @@ void runTests(void);
 
 string starX(int width)
 {
-  return "stub";
+  string result = "";
+  if( (width<3) || (width%2==0) )
+    return result;
+
+  for(int row =1; row<=width; row++)
+    {
+      for(int col=1; col<=width; col++)
+        {
+          if((col==row)||(col==width+1-row))
+          {
+            result+="*";
+          }
+          else
+            result+=" ";
+        }
+      result+="\n";
+    }
+  return result;
 }
 
 // Test-Driven Development;
