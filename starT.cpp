@@ -14,7 +14,30 @@ void runTests(void);
 string starT(int width, int height)
 {
   string result = "";
-  result = "stub"; // TODO: remove this line, replace with correct code
+  // check if parameters are valid
+  if ((width < 3) || (height < 2))
+    return result; // return without printing anything
+
+  int num = width/2+1;
+  for (int row = 1; row <= 1; row++)
+  {
+    for (int col = 1; col <= width; col++)
+    {
+      result += "*";
+    }
+    result += "\n";
+  }
+
+  for (int row = 2; row <= length; row++)
+    {
+      for (int col = 1; col <= width; col++)
+        {
+          if (col==num)
+           result += "*";
+          else
+           result += "";
+        }
+   result += "\n";
   return result;
 }
 
@@ -78,17 +101,22 @@ void assertEquals(string expected, string actual, string message = "")
 int main(int argc, char *argv[])
 {
 
-  // TODO: Add check for parameters
-  // and code to print usage message
+  if (argc != 3)
+  {
+    cerr << "Usage: " << argv[0] << " width height" << endl;
+    exit(1);
+  }
 
-  // TODO: Add code to get width and height from command line args
-  // code that checks if they are both -1; if so, call runTests()
-  // then exit.
+  int width = stoi(argv[1]);
+  int height = stoi(argv[2]);
+  // If the program is executed with parameters -1 -1 unit test
+  // the starL() function using our automated test framework
+  if (width == -1 && height == -1)
+  {
+    runTests();
+    exit(0);
+  }
 
-  runTests();
-
-  // TODO: Add code that calls the starT function and prints
-  // the result on cout (without an extra newline)
-
+  cout << starT(width, height);
   return 0;
 }
