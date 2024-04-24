@@ -15,7 +15,7 @@ void runTests(void);
 string starC(int width, int height)
 {
   string result = "";
-  if((width<=2) || (height<=3))
+  if((width<2) || (height<3))
     return result;
   
   for(int col=1; col<=width; col++)
@@ -113,7 +113,11 @@ if (argc != 3)
     runTests();
     exit(0);
   }
-
+  if((width<2) || (height<3))
+  {cout<< "";
+   return 0;
+  }
+  
   cout << starC(width, height);
   return 0;
 }
